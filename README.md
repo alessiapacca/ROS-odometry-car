@@ -22,6 +22,7 @@ and that is published on "\odom" topic;<br><br>
 	float64 theta<br>
 	string algorithm_type<br>
 and that is published on "\simple_odom".<br><br>
+
 DYNAMIC RECONFIGURATION:<br>
 Name of the parameter to change odometry source:<br>
 
@@ -38,6 +39,7 @@ TF TREE:<br>
 	  |<br>
 	  |<br>
 	base_link<br><br>
+	
 HOW TO PLAY THE NODES/INTERESTING INFO<br>
 In order to play the node, in the terminal we have to type "rosrun project_robotics odometry". Inside the code there are:<br>
 1) a class odometry_car that mainly contains differential_drive_compute (that set the fields calculated with differential drive model) and ackermann_model_compute (that set the fields calculated wit ackermann drive model). They both are called from the method compute_odometry, depending on the choice given. There is also a method to publish the odometry with tf, nav_msgs::Odometry and custom message<br>
