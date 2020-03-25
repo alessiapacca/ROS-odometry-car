@@ -8,6 +8,7 @@ Inside the archive there are four main files:<br>
 2) Custom message floatStamped that is used to read the topics speedR_stamped, steerL_stamped, steer_stamped.<br>
 3) Custom message customOdometry that is used to publish pose and type of algorithm used.<br>
 4) The file dynamic_ric.cfg that allows the dynamic reconfigure during the execution.<br><br>
+
 CUSTOM MESSAGES<br>
 The custom messages we are using are:<br>
 The floatStamped that contains<br>
