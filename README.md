@@ -25,14 +25,14 @@ and it is published on "\simple_odom".<br><br>
 DYNAMIC RECONFIGURATION:<br>
 Name of the parameter to change odometry source:<br>
 
-	"computation_type", int_t signal: if set to zero node computes <br>
-	odometry with differential drive model; if set to one node computes odometry <br>
-	with Ackermann drive model.<br><br>
-	"reset_signal", int_t signal: values 0 or 1, resets the position to (0,0)<br>
+	"computation_type", int_t signal: if set to zero node computes 
+	odometry with differential drive model; if set to one node computes odometry 
+	with Ackermann drive model.
+	"reset_signal", int_t signal: values 0 or 1, resets the position to (0,0)
 	when it's value changes.<br><br>
-	"x_coordinate", "y_coordinate", double_t parameter: values for pose setting.<br><br>
+	"x_coordinate", "y_coordinate", double_t parameter: values for pose setting.
 	"change_coordinates_signal", int_t signal: values 0 or 1, when its value changes
-	sets the new pose to the values specified by the x and y parameters<br><br>
+	sets the new pose to the values specified by the x and y parameters
 TF TREE:<br>
 	 odom<br>
 	  |<br>
