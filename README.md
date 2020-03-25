@@ -9,10 +9,10 @@ Inside the archive there are four main files:<br>
 3) Custom message customOdometry that is used to publish pose and type of algorithm used.<br>
 4) The file dynamic_ric.cfg that allows the dynamic reconfigure during the execution.<br><br>
 CUSTOM MESSAGES<br>
-The custom messages we are using are:
-The floatStamped that contains
-	Header header
-	float64 data
+The custom messages we are using are:<br>
+The floatStamped that contains<br>
+	Header header<br>
+	float64 data<br>
 and it is published on "\odom" topic;<br><br>
 The customOdometry that contains<br>
 	Header header<br>
@@ -33,15 +33,12 @@ Name of the parameter to change odometry source:<br>
 	"change_coordinates_signal", int_t signal: values 0 or 1, when its value changes
 	sets the new pose to the values specified by the x and y parameters<br><br>
 TF TREE:<br>
-	 odom
-	  |
-	  |
-	base_link	
-
-
-HOW TO PLAY THE NODES/INTERESTING INFO
-In order to play the node, in the terminal we have to type "rosrun project_robotics odometry". Inside the code there are:
-1) a class odometry_car that mainly contains differential_drive_compute (that set the fields calculated with differential drive model) and ackermann_model_compute (that set the fields calculated wit ackermann drive model). They both are called from the method compute_odometry, depending on the choice given. There is also a method to publish the odometry with tf, nav_msgs::Odometry and custom message 
-2) Outside the class, there is a main and two callback functions. The main declares the subscribers to the three topics, and calls the callback functions. The first callback function is used to parse input and call methods of Object Class odom_car. The second one receives the parameters from the dynamic reconfigure and changes the fields. 
-
+	 odom<br>
+	  |<br>
+	  |<br>
+	base_link<br><br>
+HOW TO PLAY THE NODES/INTERESTING INFO<br>
+In order to play the node, in the terminal we have to type "rosrun project_robotics odometry". Inside the code there are:<br>
+1) a class odometry_car that mainly contains differential_drive_compute (that set the fields calculated with differential drive model) and ackermann_model_compute (that set the fields calculated wit ackermann drive model). They both are called from the method compute_odometry, depending on the choice given. There is also a method to publish the odometry with tf, nav_msgs::Odometry and custom message<br>
+2) Outside the class, there is a main and two callback functions. The main declares the subscribers to the three topics, and calls the callback functions. The first callback function is used to parse input and call methods of Object Class odom_car. The second one receives the parameters from the dynamic reconfigure and changes the fields. <br><br>
 We tested the program also with rviz.
