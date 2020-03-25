@@ -21,7 +21,7 @@ and that is published on "\odom" topic;<br><br>
 	```float64 y```<br>
 	```float64 theta```<br>
 	```string algorithm_type```<br>
-and that is published on "\simple_odom".<br><br>
+and that is published on ```\simple_odom```.<br><br>
 
 **DYNAMIC RECONFIGURATION:**<br>
 Name of the parameter to change odometry source:<br>
