@@ -12,15 +12,15 @@ Inside the archive there are four main files:<br>
 **CUSTOM MESSAGES**<br>
 The custom messages we are using are:<br>
 1) The floatStamped that contains:<br>
-	```Header header<br>
-	```float64 data<br>
+	```Header header```<br>
+	```float64 data```<br>
 and that is published on "\odom" topic;<br><br>
 2) The customOdometry that contains:<br>
-	```Header header<br>
-	```float64 x<br>
-	```float64 y<br>
-	```float64 theta<br>
-	```string algorithm_type<br>
+	```Header header```<br>
+	```float64 x```<br>
+	```float64 y```<br>
+	```float64 theta```<br>
+	```string algorithm_type```<br>
 and that is published on "\simple_odom".<br><br>
 
 **DYNAMIC RECONFIGURATION:**<br>
