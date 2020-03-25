@@ -14,8 +14,8 @@ The custom messages we are using are:<br>
 The floatStamped that contains<br>
 	Header header<br>
 	float64 data<br>
-and it is published on "\odom" topic;<br><br>
-The customOdometry that contains<br>
+and are published on "\odom" topic;<br><br>
+The customOdometry contains<br>
 	Header header<br>
 	float64 x<br>
 	float64 y<br>
