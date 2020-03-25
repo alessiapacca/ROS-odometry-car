@@ -1,46 +1,38 @@
 # ROS-odometry-car
 
-TEAM MEMBERS
-Alessia Paccagnella, Antonino Elia Mandri.
-
-FILES INSIDE THE ARCHIVE
-Inside the archive there are four main files:
-1) Executable odometry.cpp that contains the code of the program.
-2) Custom message floatStamped that is used to read the topics speedR_stamped, steerL_stamped, steer_stamped.
-3) Custom message customOdometry that is used to publish pose and type of algorithm used.
-4) The file dynamic_ric.cfg that allows the dynamic reconfigure during the execution.
-
-CUSTOM MESSAGES
+TEAM MEMBERS<br>
+Alessia Paccagnella, Antonino Elia Mandri.<br><br>
+FILES INSIDE THE ARCHIVE<br>
+Inside the archive there are four main files:<br>
+1) Executable odometry.cpp that contains the code of the program.<br>
+2) Custom message floatStamped that is used to read the topics speedR_stamped, steerL_stamped, steer_stamped.<br>
+3) Custom message customOdometry that is used to publish pose and type of algorithm used.<br>
+4) The file dynamic_ric.cfg that allows the dynamic reconfigure during the execution.<br><br>
+CUSTOM MESSAGES<br>
 The custom messages we are using are:
 The floatStamped that contains
 	Header header
 	float64 data
-and it is published on "\odom" topic;
+and it is published on "\odom" topic;<br><br>
+The customOdometry that contains<br>
+	Header header<br>
+	float64 x<br>
+	float64 y<br>
+	float64 theta<br>
+	string algorithm_type<br>
+and it is published on "\simple_odom".<br><br>
+DYNAMIC RECONFIGURATION:<br>
+Name of the parameter to change odometry source:<br>
 
-The customOdometry that contains
-	Header header
-	float64 x
-	float64 y
-	float64 theta
-	string algorithm_type
-and it is published on "\simple_odom".
-
-DYNAMIC RECONFIGURATION:
-Name of the parameter to change odometry source:
-
-	"computation_type", int_t signal: if set to zero node computes 
-	odometry with differential drive model; if set to one node computes odometry 
-	with Ackermann drive model.
-	
-	"reset_signal", int_t signal: values 0 or 1, resets the position to (0,0)
-	when it's value changes.
-
-	"x_coordinate", "y_coordinate", double_t parameter: values for pose setting.
-
+	"computation_type", int_t signal: if set to zero node computes <br>
+	odometry with differential drive model; if set to one node computes odometry <br>
+	with Ackermann drive model.<br><br>
+	"reset_signal", int_t signal: values 0 or 1, resets the position to (0,0)<br>
+	when it's value changes.<br><br>
+	"x_coordinate", "y_coordinate", double_t parameter: values for pose setting.<br><br>
 	"change_coordinates_signal", int_t signal: values 0 or 1, when its value changes
-	sets the new pose to the values specified by the x and y parameters
-
-TF TREE:
+	sets the new pose to the values specified by the x and y parameters<br><br>
+TF TREE:<br>
 	 odom
 	  |
 	  |
